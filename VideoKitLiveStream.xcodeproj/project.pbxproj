@@ -18,8 +18,8 @@
 		95BC8600255C6511004CB3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC85FE255C6511004CB3EE /* Main.storyboard */; };
 		95BC8602255C6513004CB3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BC8601255C6513004CB3EE /* Assets.xcassets */; };
 		95BC8605255C6513004CB3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC8603255C6513004CB3EE /* LaunchScreen.storyboard */; };
-		95CC8FE825D7318F00BE352C /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC8FE725D7318F00BE352C /* VideoKitCore */; };
-		95CC8FEA25D7318F00BE352C /* VideoKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC8FE925D7318F00BE352C /* VideoKitLive */; };
+		95CC900D25D745E400BE352C /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC900C25D745E400BE352C /* VideoKitCore */; };
+		95CC900F25D745E400BE352C /* VideoKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC900E25D745E400BE352C /* VideoKitLive */; };
 		95E465BC25C4D0AA008F4D04 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E465BB25C4D0AA008F4D04 /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CC8FE825D7318F00BE352C /* VideoKitCore in Frameworks */,
-				95CC8FEA25D7318F00BE352C /* VideoKitLive in Frameworks */,
+				95CC900D25D745E400BE352C /* VideoKitCore in Frameworks */,
+				95CC900F25D745E400BE352C /* VideoKitLive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +152,8 @@
 			);
 			name = VideoKitLiveStream;
 			packageProductDependencies = (
-				95CC8FE725D7318F00BE352C /* VideoKitCore */,
-				95CC8FE925D7318F00BE352C /* VideoKitLive */,
+				95CC900C25D745E400BE352C /* VideoKitCore */,
+				95CC900E25D745E400BE352C /* VideoKitLive */,
 			);
 			productName = VideoKitTikTokFeed;
 			productReference = 95BC85F5255C6511004CB3EE /* VideoKitLiveStream.app */;
@@ -183,7 +183,7 @@
 			);
 			mainGroup = 95BC85EC255C6511004CB3EE;
 			packageReferences = (
-				95CC8FE625D7318F00BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
+				95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
 			);
 			productRefGroup = 95BC85F6255C6511004CB3EE /* Products */;
 			projectDirPath = "";
@@ -432,25 +432,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		95CC8FE625D7318F00BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
+		95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Video-io/VideoKit-iOS";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		95CC8FE725D7318F00BE352C /* VideoKitCore */ = {
+		95CC900C25D745E400BE352C /* VideoKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CC8FE625D7318F00BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitCore;
 		};
-		95CC8FE925D7318F00BE352C /* VideoKitLive */ = {
+		95CC900E25D745E400BE352C /* VideoKitLive */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CC8FE625D7318F00BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitLive;
 		};
 /* End XCSwiftPackageProductDependency section */
