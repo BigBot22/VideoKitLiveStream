@@ -20,3 +20,4 @@ Open VideoKitLiveStream.xcodeproj
 open VideoKitLiveStream.xcodeproj
 ```
 
+Edit your API Token in AppDelegate.swift.
