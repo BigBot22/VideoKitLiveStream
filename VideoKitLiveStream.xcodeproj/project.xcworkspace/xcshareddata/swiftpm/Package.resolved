@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VideoKit",
+        "repositoryURL": "https://github.com/Video-io/VideoKit-iOS",
+        "state": {
+          "branch": "main",
+          "revision": "eb587a82a741483725ae570427e879845d1ccf4a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

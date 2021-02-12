@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zem-W2-Sg8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Watch-->
+        <scene sceneID="kxb-xG-Sqd">
+            <objects>
+                <viewController id="g3D-1X-s5N" customClass="WatchStreamViewController" customModule="VideoKitLiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FZg-db-3uj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-black" translatesAutoresizingMaskIntoConstraints="NO" id="VKm-nt-biG">
+                                <rect key="frame" x="107" y="673" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="D8U-Qm-F0i"/>
+                                    <constraint firstAttribute="width" constant="200" id="Qc9-P1-inx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvc-07-F15" customClass="Button" customModule="VideoKitLiveStream" customModuleProvider="target">
+                                <rect key="frame" x="119.5" y="143" width="175" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="E0R-KH-DJd"/>
+                                    <constraint firstAttribute="width" constant="175" id="NUC-AG-Zbs"/>
+                                </constraints>
+                                <state key="normal" title="Join Stream"/>
+                                <connections>
+                                    <action selector="hostButtonTapped" destination="C1R-T0-zZn" eventType="touchUpInside" id="6hd-Gz-gqq"/>
+                                    <action selector="joinButtonTapped" destination="g3D-1X-s5N" eventType="touchUpInside" id="koY-I6-i27"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stream ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-jL-xe5" customClass="TextField" customModule="VideoKitLiveStream" customModuleProvider="target">
+                                <rect key="frame" x="20" y="89" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="drX-dD-2yg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebc-jL-xe5" firstAttribute="leading" secondItem="drX-dD-2yg" secondAttribute="leading" constant="20" id="1iW-bO-bkq"/>
+                            <constraint firstItem="drX-dD-2yg" firstAttribute="trailing" secondItem="ebc-jL-xe5" secondAttribute="trailing" constant="20" id="6xy-3Z-LdS"/>
+                            <constraint firstItem="ebc-jL-xe5" firstAttribute="top" secondItem="drX-dD-2yg" secondAttribute="top" constant="45" id="B3S-v0-GA2"/>
+                            <constraint firstItem="mvc-07-F15" firstAttribute="centerX" secondItem="drX-dD-2yg" secondAttribute="centerX" id="GfA-1F-MHo"/>
+                            <constraint firstItem="VKm-nt-biG" firstAttribute="centerX" secondItem="drX-dD-2yg" secondAttribute="centerX" id="LkA-lJ-wdk"/>
+                            <constraint firstItem="mvc-07-F15" firstAttribute="top" secondItem="ebc-jL-xe5" secondAttribute="bottom" constant="20" id="OWY-Is-AMk"/>
+                            <constraint firstItem="drX-dD-2yg" firstAttribute="bottom" secondItem="VKm-nt-biG" secondAttribute="bottom" constant="40" id="U6h-C1-H4Z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Watch" image="video" catalog="system" id="hWw-yo-MJM"/>
+                    <connections>
+                        <outlet property="idTextField" destination="ebc-jL-xe5" id="ABx-F3-wCN"/>
+                        <outlet property="joinButton" destination="mvc-07-F15" id="IAq-Gi-6z3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCx-rB-VPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="-109.15178571428571"/>
+        </scene>
+        <!--Broadcast-->
+        <scene sceneID="iP6-UL-Okc">
+            <objects>
+                <viewController id="C1R-T0-zZn" customClass="StartStreamViewController" customModule="VideoKitLiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8Q-m9-LYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5w-4B-eNq" customClass="Button" customModule="VideoKitLiveStream" customModuleProvider="target">
+                                <rect key="frame" x="119.5" y="155" width="175" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Llc-ur-E09"/>
+                                    <constraint firstAttribute="width" constant="175" id="vqV-NI-m9j"/>
+                                </constraints>
+                                <state key="normal" title="Start Stream"/>
+                                <connections>
+                                    <action selector="hostButtonTapped" destination="C1R-T0-zZn" eventType="touchUpInside" id="eX1-a1-Xjl"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j2Q-LV-TBi">
+                                <rect key="frame" x="119" y="84" width="176" height="32"/>
+                                <segments>
+                                    <segment title="360p"/>
+                                    <segment title="720p"/>
+                                    <segment title="1080p"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-black" translatesAutoresizingMaskIntoConstraints="NO" id="eDS-a7-2uR">
+                                <rect key="frame" x="107" y="673" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4xg-B7-fFC"/>
+                                    <constraint firstAttribute="width" constant="200" id="ENQ-bU-JMZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AaK-8e-Ipd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eDS-a7-2uR" firstAttribute="centerX" secondItem="AaK-8e-Ipd" secondAttribute="centerX" id="CkA-iS-78u"/>
+                            <constraint firstItem="j2Q-LV-TBi" firstAttribute="top" secondItem="AaK-8e-Ipd" secondAttribute="top" constant="40" id="EHO-sh-Tma"/>
+                            <constraint firstItem="AaK-8e-Ipd" firstAttribute="bottom" secondItem="eDS-a7-2uR" secondAttribute="bottom" constant="40" id="F6c-VP-zoA"/>
+                            <constraint firstItem="f5w-4B-eNq" firstAttribute="centerX" secondItem="AaK-8e-Ipd" secondAttribute="centerX" id="H8L-Dd-n7k"/>
+                            <constraint firstItem="j2Q-LV-TBi" firstAttribute="centerX" secondItem="AaK-8e-Ipd" secondAttribute="centerX" id="ldH-R4-yv2"/>
+                            <constraint firstItem="f5w-4B-eNq" firstAttribute="top" secondItem="j2Q-LV-TBi" secondAttribute="bottom" constant="40" id="of1-eN-mZb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Broadcast" image="wifi" catalog="system" id="e9y-KS-HEW"/>
+                    <connections>
+                        <outlet property="hostButton" destination="f5w-4B-eNq" id="Xam-a7-NxZ"/>
+                        <outlet property="presetSelector" destination="j2Q-LV-TBi" id="hPP-XS-sRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyZ-hp-503" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="-774"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="m1g-bK-eAW">
+            <objects>
+                <tabBarController id="zem-W2-Sg8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wwc-kV-jho">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="C1R-T0-zZn" kind="relationship" relationship="viewControllers" id="gxn-Zf-eV7"/>
+                        <segue destination="g3D-1X-s5N" kind="relationship" relationship="viewControllers" id="FSf-4O-VOE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGX-0g-KM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="-470"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-black" width="624" height="302"/>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <image name="wifi" catalog="system" width="128" height="91"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
