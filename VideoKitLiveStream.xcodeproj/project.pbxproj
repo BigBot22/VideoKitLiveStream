@@ -12,14 +12,14 @@
 		95434BBA25D46DEE00365882 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95434BB925D46DEE00365882 /* Button.swift */; };
 		95434BBF25D46FBC00365882 /* WatchStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95434BBE25D46FBC00365882 /* WatchStreamViewController.swift */; };
 		95434CD725D4AF4300365882 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95434CD625D4AF4300365882 /* TextField.swift */; };
+		954525CD25E5BB92004CF6B7 /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 954525CC25E5BB92004CF6B7 /* VideoKitCore */; };
+		954525CF25E5BB92004CF6B7 /* VideoKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = 954525CE25E5BB92004CF6B7 /* VideoKitLive */; };
 		95BC85F9255C6511004CB3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85F8255C6511004CB3EE /* AppDelegate.swift */; };
 		95BC85FB255C6511004CB3EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85FA255C6511004CB3EE /* SceneDelegate.swift */; };
 		95BC85FD255C6511004CB3EE /* StartStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85FC255C6511004CB3EE /* StartStreamViewController.swift */; };
 		95BC8600255C6511004CB3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC85FE255C6511004CB3EE /* Main.storyboard */; };
 		95BC8602255C6513004CB3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BC8601255C6513004CB3EE /* Assets.xcassets */; };
 		95BC8605255C6513004CB3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC8603255C6513004CB3EE /* LaunchScreen.storyboard */; };
-		95CC900D25D745E400BE352C /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC900C25D745E400BE352C /* VideoKitCore */; };
-		95CC900F25D745E400BE352C /* VideoKitLive in Frameworks */ = {isa = PBXBuildFile; productRef = 95CC900E25D745E400BE352C /* VideoKitLive */; };
 		95E465BC25C4D0AA008F4D04 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E465BB25C4D0AA008F4D04 /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CC900D25D745E400BE352C /* VideoKitCore in Frameworks */,
-				95CC900F25D745E400BE352C /* VideoKitLive in Frameworks */,
+				954525CD25E5BB92004CF6B7 /* VideoKitCore in Frameworks */,
+				954525CF25E5BB92004CF6B7 /* VideoKitLive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +152,8 @@
 			);
 			name = VideoKitLiveStream;
 			packageProductDependencies = (
-				95CC900C25D745E400BE352C /* VideoKitCore */,
-				95CC900E25D745E400BE352C /* VideoKitLive */,
+				954525CC25E5BB92004CF6B7 /* VideoKitCore */,
+				954525CE25E5BB92004CF6B7 /* VideoKitLive */,
 			);
 			productName = VideoKitTikTokFeed;
 			productReference = 95BC85F5255C6511004CB3EE /* VideoKitLiveStream.app */;
@@ -183,7 +183,7 @@
 			);
 			mainGroup = 95BC85EC255C6511004CB3EE;
 			packageReferences = (
-				95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
+				954525CB25E5BB92004CF6B7 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
 			);
 			productRefGroup = 95BC85F6255C6511004CB3EE /* Products */;
 			projectDirPath = "";
@@ -432,25 +432,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
+		954525CB25E5BB92004CF6B7 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Video-io/VideoKit-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
+				minimumVersion = 1.0.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		95CC900C25D745E400BE352C /* VideoKitCore */ = {
+		954525CC25E5BB92004CF6B7 /* VideoKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 954525CB25E5BB92004CF6B7 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitCore;
 		};
-		95CC900E25D745E400BE352C /* VideoKitLive */ = {
+		954525CE25E5BB92004CF6B7 /* VideoKitLive */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CC900B25D745E400BE352C /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 954525CB25E5BB92004CF6B7 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitLive;
 		};
 /* End XCSwiftPackageProductDependency section */
