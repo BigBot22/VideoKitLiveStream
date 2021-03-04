@@ -114,6 +114,11 @@ extension BroadcastViewController: VKStreamerDelegate {
         print("Orientation changed.")
     }
     
+    /// Called if max reconnection attempts where hit and the stream failed to connect
+    func streamDidFailToConnect(_ stream: VideoKitCore.VKStream, connectionAttempts: Int) {
+        print("Failed to connect to stream.")
+    }
+    
     func streamStatusChanged(_ stream: VKStream, state: VKLiveStreamState) {
         if state == .connected {
             changeStatus("connected")
@@ -175,7 +180,10 @@ extension BroadcastViewController {
         // Host your stream
         vkLive.host(type: self.streamType, inView: streamView) { (streamer, stream, error) in
             guard let stream = stream else {
-                print("There was an error starting your stream.")
+                let alert = UIAlertController(title: "Error", message: "There was an error starting your stream. (\(error?.localizedDescription ?? "")", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+                self.present(alert, animated: true)
                 return
             }
             
@@ -194,10 +202,11 @@ extension BroadcastViewController {
 extension BroadcastViewController {
     @objc internal func streamButtonTapped() {
         guard let streamer = streamer else { return }
-        
+        print(streamer.state)
         if streamer.state == .streaming {
             streamer.stop()
             streamButton.setTitle("Start Streaming", for: .normal)
+            fpsLabel.text = ""
         } else {
             changeStatus("starting")
             streamer.start()
