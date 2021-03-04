@@ -21,3 +21,8 @@ open VideoKitLiveStream.xcodeproj
 ```
 
 Edit your API Token in AppDelegate.swift.
+
+### Preview
+
+![Preview](https://raw.githubusercontent.com/Video-io/VideoKitLiveStream/main/Assets/start-stream.png)
+![Preview](https://raw.githubusercontent.com/Video-io/VideoKitLiveStream/main/Assets/join-stream.png)
