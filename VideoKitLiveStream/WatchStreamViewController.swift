@@ -18,7 +18,11 @@ class WatchStreamViewController: UIViewController {
     }
     
     @IBAction func joinButtonTapped() {
+        guard let streamId = idTextField.text else { return }
         
+        let streamVC = JoinViewController(streamId: streamId)
+        streamVC.modalPresentationStyle = .automatic
+        present(streamVC, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

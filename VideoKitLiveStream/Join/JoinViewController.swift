@@ -29,11 +29,7 @@ class JoinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let streamId = streamId else {
-            print("Please set id of the stream you want to join.")
-            return
-        }
+        view.backgroundColor = .black
         
         // Preparing live stream
         view.addSubview(streamView)
@@ -44,6 +40,15 @@ class JoinViewController: UIViewController {
             streamView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             streamView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard let streamId = streamId else {
+            print("Please set id of the stream you want to join.")
+            return
+        }
         
         DispatchQueue.main.async {
             // Join your stream
@@ -54,9 +59,5 @@ class JoinViewController: UIViewController {
                 // You joined the stream!
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
 }
